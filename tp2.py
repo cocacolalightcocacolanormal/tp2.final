@@ -10,7 +10,7 @@ def nombre():
     #On choisit le nombre aléatoire entre les paramètres des bornes
     return random.randint(nombre1, nombre2)
 
-
+#On crée la variable tries pour pouvoir compter le nombre d'essais. On définit la valeur de la variable à 0. Pour chaque essai qui ne s'agit pas du nombre mystère, on ajoute 1 à la valeur de la variable.
 playing = True
 while playing:
     range = nombre()
@@ -30,6 +30,7 @@ while playing:
         else:
             print('Vous avez fini en:', tries, 'essais')
             winning = True
+#On demande à l'utilisateur s'il veut jouer une autre partie. S'il dit oui, on recommence le jeu. S'il dit non, on print "bye" et on arrete le programme.
     question = input('Voulez-vous recommencer? Si oui, appuyez sur Y. Si non, appuyez sur N.')
     if question == 'n':
         print("Merci, bye")
